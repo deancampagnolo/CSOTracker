@@ -21,10 +21,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:text="@string/gotomap"
         android:onClick="onButtonClicked"
+        android:text="@string/gotomap"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/ReportCSOButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/report_a_cso"
+        android:onClick="onButtonClicked"
+        app:layout_constraintStart_toStartOf="@+id/MapButton"
+        app:layout_constraintTop_toBottomOf="@+id/MapButton" />
 
 </android.support.constraint.ConstraintLayout>

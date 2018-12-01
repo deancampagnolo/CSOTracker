@@ -6,4 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".ReportCSO">
 
+    <Button
+        android:id="@+id/ReportButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onButtonClicked"
+        android:text="@string/full_send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:layout_marginStart="18dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/ReportButton"
+        app:layout_constraintStart_toStartOf="@+id/ReportButton" />
 </android.support.constraint.ConstraintLayout>

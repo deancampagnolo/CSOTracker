@@ -13,12 +13,18 @@ public class Main extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+
     }
 
     public void onButtonClicked(View v){
         switch(v.getId()){
             case R.id.MapButton:
                 startActivity(new Intent(this, MapForPast.class));
+                break;
+
+            case R.id.ReportCSOButton:
+                startActivity(new Intent(this, ReportCSO.class));
+                break;
         }
 
     }
