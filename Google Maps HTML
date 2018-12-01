@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <title>Region Code Biasing (US)</title>
+        <style>
+            /* Always set the map height explicitly to define the size of the div
+             * element that contains the map. */
+            #map {
+                height: 100%;
+            }
+            /* Optional: Makes the sample page fill the window. */
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+    <div id="map"></div>
+    <script>
+        var map;
+
+        function placeMarker(position, map) {
+            var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+            var marker = new google.maps.Marker({
+                position: position,
+                map: map,
+                animation: google.maps.Animation.DROP,
+                icon: image
+            });
+            //map.panTo(position);
+        }
+
+        function initMap() {
+
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 36.990754493068664, lng: -122.05928508283148},
+                zoom: 14.5
+
+            });
+
+            var list = [36.990754493068664,-122.05928508283148];
+
+            for (var i = 0; i < 100; i++) {
+                var lat = list[0] + Math.random() / 100;
+                var lng = list[1] + Math.random() / 100;
+                placeMarker({lat: lat,lng: lng}, map)
+            }
+
+            /*var marker = new google.maps.Marker({
+                position: {lat: 36.995891199999996, lng: -122.05834239999999},
+                map: map,
+                title: 'CSO HERE'
+            })
+
+            map.addListener('click', function(e) {
+                placeMarker(e.latLng, map);
+            });
+            */
+
+        }
+    </script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkPd9maFP1-k0_-UN4lTm8x1p_0w5kq2I&callback=initMap">
+        </script>
+    </body>
+</html>
