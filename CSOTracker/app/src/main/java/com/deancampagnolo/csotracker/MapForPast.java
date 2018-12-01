@@ -7,17 +7,33 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapForPast extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    private LatLng[] mapValues;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map_for_past);
+
+        LatLng UCSC = new LatLng(36.9916, -122.0583);
+        LatLng UCSC2 = new LatLng(36.9915, -122.0583);
+        LatLng UCSC3 = new LatLng(36.99151, -122.0583);
+
+        mapValues = new LatLng[3];
+
+        mapValues[0] = UCSC;
+        mapValues[1] = UCSC2;
+        mapValues[2] = UCSC3;
+
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -38,9 +54,20 @@ public class MapForPast extends FragmentActivity implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
+        //MapController mapController = mMap.getController;
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        //mMap.zoom
+        mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+        for(LatLng i : mapValues){
+            MarkerOptions markerOptions = new MarkerOptions().position(i).title("Marker in Sydney");
+            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.jason));
+            mMap.addMarker(markerOptions);
+
+        }
+
+        mMap.setMinZoomPreference(15);
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(mapValues[0]));
+        //mMap.moveCamera(CameraUpdateFactory.zoomBy(4));
+
     }
 }
