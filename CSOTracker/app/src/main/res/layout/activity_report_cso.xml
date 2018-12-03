@@ -8,10 +8,13 @@
 
     <Button
         android:id="@+id/ReportButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="307dp"
+        android:layout_height="213dp"
+        android:layout_marginTop="80dp"
         android:onClick="onButtonClicked"
         android:text="@string/full_send"
+        android:textColor="?android:attr/colorError"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +26,20 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="56dp"
         android:layout_marginStart="18dp"
-        android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/ReportButton"
         app:layout_constraintStart_toStartOf="@+id/ReportButton" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/audiowide"
+        android:text="REPORT CSO"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

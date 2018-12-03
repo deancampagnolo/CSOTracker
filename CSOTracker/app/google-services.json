@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "350561154723",
+    "firebase_url": "https://csotracker-c0a65.firebaseio.com",
+    "project_id": "csotracker-c0a65",
+    "storage_bucket": "csotracker-c0a65.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:350561154723:android:a291e7e63d87132b",
+        "android_client_info": {
+          "package_name": "com.deancampagnolo.csotracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "350561154723-n8flvsg8b70ch4fmb5emeqjgfremlnj3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.deancampagnolo.csotracker",
+            "certificate_hash": "bf669eca1eaf1c45dfbb9b73fb5b0d462235e22a"
+          }
+        },
+        {
+          "client_id": "350561154723-cd2a429qihguvtnih0iif72tuknl00kv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEDWsT9d6nAiRZNTtGqO3lB8LlJTLTUtU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "350561154723-cd2a429qihguvtnih0iif72tuknl00kv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
